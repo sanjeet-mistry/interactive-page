@@ -1,0 +1,29 @@
+{
+  "name": "3d-interactive-data-threejs",
+  "version": "1.0.0",
+  "description": "prdxn-dev-framework ===================",
+  "main": "js/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "serve": "nodemon -e scss -x 'npm run watch:sass'",
+    "watch:sass": "sass --no-source-map --watch sass/:css/"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^7.0.1",
+    "nodemon": "^2.0.18"
+  },
+  "dependencies": {
+    "sass": "^1.53.0",
+    "three": "^0.144.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/msanjeetaxioned/interactive-data-3d-threejs.git"
+  },
+  "bugs": {
+    "url": "https://github.com/msanjeetaxioned/interactive-data-3d-threejs/issues"
+  },
+  "homepage": "https://github.com/msanjeetaxioned/interactive-data-3d-threejs#readme"
+}
