@@ -1,0 +1,932 @@
+@font-face {
+	font-family: 'Caraque Trial Regular Melted';
+	font-style: normal;
+	font-weight: normal;
+	src: local('Caraque Trial Regular Melted'), url('../fonts/Caraque_Trial_RgMelted.woff') format('woff');
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Poppins Regular';
+	font-style: normal;
+	font-weight: normal;
+	src: local('Poppins Regular'), url('../fonts/Poppins-Regular.woff') format('woff');
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Poppins Thin';
+	font-style: normal;
+	font-weight: normal;
+	src: local('Poppins Thin'), url('../fonts/Poppins-Thin.woff') format('woff');
+	font-display: swap;
+}
+
+$white: #fff;
+$gray: #626262;
+$black: #000;
+$large-pc: 1920px;
+$pc: 1440px;
+$small-pc: 1280px;
+$ipad-pro: 1024px;
+$tablet: 1023px;
+$ipad: 768px;
+$mobile: 767px;
+$large-mobile: 425px;
+$med-mobile: 375px;
+$small-mobile: 320px;
+
+@mixin breakpoint($device) {
+	@if ($device == 'large-pc') {
+		@media screen and (min-width: $large-pc) {
+      @content;
+    }
+	}
+  @else if($device=='pc'){
+    @media screen and (max-width: $pc) {
+      @content;
+    }
+  }
+	@else if($device=='small-pc'){
+    @media screen and (max-width: $small-pc) {
+      @content;
+    }
+  } 
+  @else if($device=='ipad-pro') {
+    @media screen and (max-width: $ipad-pro) {
+      @content;
+    }
+  }
+  @else if($device=='ipad') {
+    @media screen and (max-width: $ipad) {
+      @content;
+    }
+  }
+	@else if($device=='tablet') {
+    @media screen and (max-width: $tablet) {
+      @content;
+    }
+  }
+	@else if($device=='mobile') {
+    @media screen and (max-width: $mobile) {
+      @content;
+    }
+  }
+  @else if($device=='large-mobile') {
+    @media screen and (max-width: $large-mobile) {
+      @content;
+    }
+  }
+  @else if($device=='med-mobile') {
+    @media screen and (max-width: $med-mobile) {
+      @content;
+    }
+  }
+  @else if($device=='small-mobile') {
+    @media screen and (max-width: $small-mobile) {
+      @content;
+    }
+  }
+  @else if($device=='min-ipad') {
+    @media screen and (min-width: $ipad) {
+      @content;
+    }
+  }
+}
+
+* {
+	font-family: "Poppins Regular", sans-serif; 
+	box-sizing: border-box;
+}
+
+body { 
+	margin: 0;
+	color: $white;
+	font-family: "Poppins Regular", sans-serif;
+}
+
+h2 {
+	margin-bottom: 30px;
+	color: antiquewhite;
+	font-size: 48px;
+	font-weight: 700;
+	text-align: center;
+	text-transform: capitalize;
+}
+
+/* Styles start */
+.wrapper {
+	width: 85vw;
+	height: 100%;
+	padding: 50px 0;
+	margin: 0 auto;
+
+	@include breakpoint(tablet) {
+		width: 92vw;
+	}
+
+	@include breakpoint(mobile) {
+		width: calc(100% - 10px);
+		margin: 0 5px;
+	}
+}
+
+section {
+	width: 100%;
+	height: 100%;
+	min-height: 100vh;
+}
+
+/* Section 1 SCSS start */
+.section1 {
+	position: relative;
+	z-index: 1;
+	overflow: hidden;
+
+	h1 {
+		position: absolute;
+		z-index: 2;
+		top: 50px;
+		left: 70px;
+
+		@include breakpoint(large-pc) {
+			left: 110px;
+		}
+
+		@include breakpoint(mobile) {
+			left: 50px;
+		}
+
+		a { 
+			display: inline-block; 
+			&:hover { cursor: pointer; }
+		}
+
+		img {
+			width: 159px;
+			height: 57px;
+			display: inline-block;
+
+			@include breakpoint(mobile) {
+				width: 126px;
+				height: 45px;
+			}
+		}
+	}
+
+	video {
+		width: auto;
+		min-height: 100%;
+		display: block;
+	}
+}
+/* Section 1 SCSS end */
+
+/* Graph1 SCSS start */
+.graph-section {
+	padding-bottom: 50vh;
+	background-color: $black;
+
+	@include breakpoint(mobile) {
+		height: 100%;
+		padding-bottom: 0;
+	}
+
+	.wrapper {
+		height: 100%;
+		min-height: 100vh;
+
+		@include breakpoint(mobile) {
+			min-height: unset;
+		}
+	}
+
+	.section-title {
+		width: 100%;
+		margin: 0;
+		font-size: 9.5rem;
+		font-weight: 500;
+		line-height: 1;
+		text-align: center;
+		text-transform: uppercase;
+
+		@include breakpoint(small-pc) {
+			font-size: 7rem;
+		}
+
+		@include breakpoint(mobile) {
+			font-size: 4.5rem;
+		}
+
+		.thin { 
+			display: block;
+			font-family: "Poppins Thin"; 
+		}
+	}
+
+	.section-info {
+		padding-top: 10px;
+		margin-bottom: 60px;
+		text-align: center;
+
+		@include breakpoint(mobile) {
+			margin-bottom: 50px;
+		}
+
+		span {
+			display: inline-block;
+			background: linear-gradient(270deg, #4c65f7 31.21%, #ff62aa 73.32%);
+			background-clip: text;
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+			font-size: 25px;
+			font-weight: 600;
+
+			@include breakpoint(small-pc) {
+				font-size: 18px;
+			}
+		}
+	}
+
+	.canvas-container { position: relative; }
+}
+
+.graph1-value {
+	margin-top: -70px;
+	position: absolute;
+	color: $white;
+	font-size: 26px;
+	font-weight: bold;
+
+	@include breakpoint(small-pc) {
+		margin-top: -60px;
+		font-size: 22px;
+	}
+
+	@include breakpoint(tablet) {
+		margin-top: -50px;
+		font-size: 18px;
+	}
+
+	@include breakpoint(mobile) {
+		margin-top: -30px;
+		font-size: 12px;
+	}
+}
+
+.graph1-info-and-buttons {
+	width: 100%;
+	position: absolute;
+	top: 55%;
+	left: 50%;
+	transform: translate(-50%, 0);
+
+	> span {
+		margin: 60px 0 20px;
+		display: block;
+		color: $gray;
+		font-size: 14px;
+		font-weight: bold;
+		text-align: center;
+		text-transform: uppercase;
+
+		@include breakpoint(small-pc) {
+			margin: 50px 0 20px;
+		}
+
+		@include breakpoint(mobile) {
+			margin: 40px 0 20px;
+			font-size: 12px;
+		}
+	}
+}
+
+.graph1-x-name {
+	margin-top: 40px;
+	position: absolute;
+	color: $white;
+	font-size: 20px;
+	font-weight: bold;
+	text-transform: capitalize;
+
+	@include breakpoint(small-pc) {
+		margin-top: 30px;
+		font-size: 18px;
+	}
+
+	@include breakpoint(tablet) {
+		font-size: 14px;
+	}
+
+	@include breakpoint(mobile) {
+		margin-top: 20px;
+		font-size: 10px;
+	}
+}
+
+.slider-names-container { 
+	height: 50px;
+	position: relative;
+
+	@include breakpoint(small-pc) {
+		height: 44px;
+	}
+
+	@include breakpoint(tablet) {
+		height: 36px;
+	}
+
+	@include breakpoint(mobile) {
+		height: 30px;
+	}
+
+	.button {
+		width: 50px;
+		height: 50px;
+		border: 1px solid $white;
+		border-radius: 50%;
+		display: inline-block;
+		position: absolute;
+		top: 50%;
+		background-color: transparent;
+		color: $white;
+		font-size: 0;
+		font-weight: bold;
+		text-transform: capitalize;
+		transform: translate(0, -50%);
+		transition: background-color 1s ease-in-out;
+
+		@include breakpoint(small-pc) {
+			width: 44px;
+			height: 44px;
+		}
+
+		@include breakpoint(tablet) {
+			width: 36px;
+			height: 36px;
+		}
+
+		@include breakpoint(mobile) {
+			width: 30px;
+			height: 30px;
+		}
+
+		&.previous-button {
+			left: 34%;
+
+			@include breakpoint(small-pc) {
+				left: 33.5%;
+			}
+
+			@include breakpoint(mobile) {
+				left: 5%;
+			}
+
+			&::after {
+				content: "\f060";
+				font-family: "Font Awesome 6 Free";
+				font-size: 24px;
+				font-weight: 900;
+
+				@include breakpoint(small-pc) {
+					font-size: 20px;
+				}
+
+				@include breakpoint(tablet) {
+					font-size: 18px;
+				}
+
+				@include breakpoint(mobile) {
+					font-size: 16px;
+				}
+			}
+		}
+
+		&.next-button {
+			right: 34%;
+
+			@include breakpoint(small-pc) {
+				right: 33.5%;
+			}
+
+			@include breakpoint(mobile) {
+				right: 5%;
+			}
+
+			&::after {
+				content: "\f061";
+				font-family: "Font Awesome 6 Free";
+				font-size: 24px;
+				font-weight: 900;
+
+				@include breakpoint(small-pc) {
+					font-size: 20px;
+				}
+
+				@include breakpoint(tablet) {
+					font-size: 18px;
+				}
+
+				@include breakpoint(mobile) {
+					font-size: 16px;
+				}
+			}
+		}
+
+		&:hover {
+			background-color: rgba(224, 28, 117, 1);
+			cursor: pointer;
+		}
+	}
+}
+
+.slider-names {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	overflow: hidden;
+
+	@include breakpoint(mobile) {
+		display: none;
+	}
+
+	li {
+		flex-basis: 16%;
+		flex-shrink: 0;
+		text-align: center;
+
+		span {
+			color: $gray;
+			font-size: 24px;
+			font-weight: bold;
+			text-transform: uppercase;
+
+			@include breakpoint(small-pc) {
+				font-size: 20px;
+			}
+
+			@include breakpoint(tablet) {
+				font-size: 16px;
+			}
+		}
+
+		&.active {
+			flex-basis: 36%;
+
+			span {
+				color: $white;
+				font-size: 32px;
+
+				@include breakpoint(small-pc) {
+					font-size: 24px;
+				}
+
+				@include breakpoint(tablet) {
+					font-size: 18px;
+				}
+			}
+		}
+	}
+
+	.active + li { margin-left: 0; }
+}
+
+.slider-names-mobile {
+	display: none;
+
+	@include breakpoint(mobile) {
+		width: 100%;
+		height: 100%;
+		display: flex;
+		align-items: center;
+		overflow: hidden;
+	}
+
+	li {
+		flex-basis: 100%;
+		flex-shrink: 0;
+		text-align: center;
+
+		span {
+			color: $gray;
+			font-size: 14px;
+			font-weight: bold;
+			text-transform: uppercase;
+		}
+
+		&.active {
+			span {
+				color: $white;
+				font-size: 16px;
+			}
+		}
+	}
+}
+/* Graph1 SCSS end */
+
+/* Quote section SCSS start */
+.quote-section {
+	height: auto;
+	padding: 50px 0;
+	background-color: $black; 
+
+	li {
+		height: 100vh;
+		display: flex;
+
+		@include breakpoint(mobile) {
+			height: auto;
+			padding: 0;
+			margin-bottom: 40px;
+			display: block;
+		}
+
+		&:last-child {
+			@include breakpoint(mobile) {
+				margin-bottom: 0;
+			}
+		}
+
+		.quote-content {
+			padding-right: 30px;
+			padding-left: 0;
+
+			@include breakpoint(mobile) { padding: 0; }
+		}
+	}
+
+	li:nth-child(even) {
+		flex-direction: row-reverse;
+
+		.quote-content { 
+			padding-right: 0;
+			padding-left: 30px;
+
+			@include breakpoint(mobile) { padding: 0; }
+		}
+	}
+
+	figure { 
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		flex-basis: 35%;
+
+		img {
+			width: 300px;
+			height: 300px;
+			border: 10px solid #ff62aa;
+			border-radius: 50%;
+			outline: 2px solid lightblue;
+			display: block;
+
+			@include breakpoint(small-pc) {
+				width: 200px;
+				height: 200px;
+			}
+		}
+	}
+}
+
+.quote-content {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	flex-basis: 65%;
+	
+	@include breakpoint(small-pc) {
+		padding-right: 20px;
+	}
+
+	@include breakpoint(mobile) {
+		padding: 0;
+		margin-bottom: 30px;
+		text-align: center;
+	}
+
+	h3 {
+		width: fit-content;
+		margin-bottom: 20px;
+		display: inline-block;
+		background: linear-gradient(270deg, #4c65f7 31.21%, #ff62aa 73.32%);
+		font-size: 32px;
+		font-weight: bold;
+		background-clip: text;
+		-webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+		text-transform: uppercase;
+
+		@include breakpoint(small-pc) {
+			font-size: 20px;
+		}
+
+		@include breakpoint(large-pc) {
+			margin-bottom: 40px;
+			font-size: 50px;
+		}
+
+		@include breakpoint(mobile) {
+			width: 100%;
+			display: block;
+			font-size: 20px;
+		}
+	}
+
+	p {
+		margin-bottom: 25px;
+		color: $white;
+		font-size: 24px;
+		line-height: 34px;
+
+		@include breakpoint(small-pc) {
+			font-size: 22px;
+			line-height: 32px;
+		}
+
+		@include breakpoint(large-pc) {
+			margin-bottom: 80px;
+			font-size: 36px;
+			line-height: 56px;
+		}
+
+		@include breakpoint(mobile) {
+			margin-bottom: 20px;
+			font-size: 18px;
+		}
+	}
+
+	a {
+		width: fit-content;
+		display: inline-block;
+		position: relative;
+		background: linear-gradient(270deg, #4c65f7 31.21%, #ff62aa 73.32%);
+		font-size: 24px;
+		font-weight: bold;
+		background-clip: text;
+		-webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+		text-transform: capitalize;
+
+		@include breakpoint(small-pc) {
+			font-size: 22px;
+		}
+
+		@include breakpoint(mobile) {
+			width: 100%;
+			font-size: 18px;
+		}
+
+		// &::before {
+		// 	width: 100%;
+		// 	height: 2px;
+		// 	display: inline-block;
+		// 	position: absolute;
+		// 	left: 0px;
+		// 	bottom: 0px;
+		// 	background: linear-gradient(270deg, #4c65f7 31.21%, #ff62aa 73.32%);
+		// }
+
+		&::after {
+			content: '\f178';
+			margin-left: 5px;
+			display: inline-block;
+			color: $white;
+			font-family: "Font Awesome 6 Free";
+			font-size: 24px;
+			font-weight: 900;
+
+			@include breakpoint(small-pc) {
+				font-size: 22px;
+			}
+		}
+	}
+
+	.author-qualification {
+		display: block;
+		color: $gray;
+		font-size: 22px;
+		font-weight: bold;
+		line-height: 30px;
+
+		@include breakpoint(small-pc) {
+			font-size: 20px;
+			line-height: 26px;
+		}
+	}
+}
+/* Quote section SCSS end */
+
+/* Graph2 SCSS start */
+.graph2-value {
+	position: absolute;
+	color: $white;
+	font-size: 26px;
+	font-weight: bold;
+}
+
+.graph2-info {
+	width: 100%;
+	position: absolute;
+	top: 55%;
+	left: 50%;
+	transform: translate(-50%, 0);
+
+	> span {
+		margin: 90px 0 20px;
+		display: block;
+		color: $gray;
+		font-size: 14px;
+		font-weight: bold;
+		text-align: center;
+		text-transform: uppercase;
+
+		@include breakpoint(mobile) {
+			margin: 65px 0 20px;
+			font-size: 12px;
+		}
+	}
+}
+
+.graph2-x {
+	margin-top: 40px;
+	position: absolute;
+	text-align: center;
+	
+	@include breakpoint(small-pc) {
+		margin-top: 30px;
+	}
+
+	@include breakpoint(tablet) {
+		margin-top: 25px;
+	}
+
+	@include breakpoint(mobile) {
+		margin-top: 20px;
+	}
+
+	span { display: block; }
+
+	.graph-x-name {
+		margin-bottom: 10px;
+		color: $white;
+		font-size: 20px;
+		font-weight: bold;
+
+		@include breakpoint(small-pc) {
+			font-size: 18px;
+		}
+
+		@include breakpoint(tablet) {
+			font-size: 16px;
+		}
+
+		@include breakpoint(mobile) {
+			font-size: 10px;
+		}
+	}
+
+	.graph-x-value {
+		color: $white;
+		font-size: 16px;
+		font-weight: bold;
+
+		@include breakpoint(small-pc) {
+			font-size: 15px;
+		}
+
+		@include breakpoint(tablet) {
+			font-size: 14px;
+		}
+
+		@include breakpoint(mobile) {
+			font-size: 10px;
+		}
+	}
+}
+/* Graph2 SCSS end */
+
+/* Lifestyle section start */
+.lifestyle-section {
+	height: 100%;
+	background-color: $black;
+
+	.wrapper {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+
+		@include breakpoint(mobile) {
+			text-align: center;
+		}
+	}
+
+	h3 {
+		margin-bottom: 15px;
+		color: $white;
+		font-size: 22px;
+		text-transform: uppercase;
+
+		@include breakpoint(small-pc) {
+			font-size: 20px;
+		}
+
+		@include breakpoint(large-pc) {
+			margin-bottom: 35px;
+		}
+
+		@include breakpoint(mobile) {
+			margin-bottom: 25px;
+			font-size: 18px;
+		}
+	}
+
+	p {
+		margin-bottom: 30px;
+		color: $white;
+		font-size: 90px;
+		font-weight: bold;
+		line-height: 110px;
+
+		@include breakpoint(small-pc) {
+			font-size: 66px;
+			line-height: 86px;
+		}
+
+		@include breakpoint(large-pc) {
+			margin-bottom: 75px;
+		}
+
+		@include breakpoint(mobile) {
+			margin-bottom: 25px;
+			font-size: 40px;
+			line-height: 50px;
+		}
+
+		span {
+			background: linear-gradient(270deg, #4c65f7 31.21%, #ff62aa 73.32%);
+			color: transparent;
+			background-clip: text;
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+		}
+	}
+
+	.share-button-container {
+		text-align: center;
+
+		button {
+			padding: 10px 20px;
+			border: 2px solid transparent;
+			border-radius: 10px;
+			display: inline-block;
+			background: linear-gradient($black, $black) padding-box, linear-gradient(270deg, #4c65f7 31.21%, #ff62aa 73.32%) border-box;
+			color: $white;
+			font-size: 18px;
+			text-transform: capitalize;
+
+			@include breakpoint(small-pc) {
+				padding: 8px 16px;
+				font-size: 16px;
+			}
+
+			&:hover {
+				border: 2px solid $white;
+				background: linear-gradient(270deg, #4c65f7 31.21%, #ff62aa 73.32%);
+				color: transparent;
+				background-clip: text;
+				-webkit-background-clip: text;
+				-webkit-text-fill-color: transparent;
+			}
+		}
+	}
+}
+/* Lifestyle section end */
+
+/* Spheres section start */
+.spheres-section {
+	height: 100%;
+	min-height: 100vh;
+	padding: 50px 0 0;
+	background-color: $black;
+
+	@include breakpoint(mobile) {
+		min-height: unset;
+	}
+
+	.absolute-content { 
+		width: 100%;
+		position: absolute;
+
+		@include breakpoint(mobile) {
+			height: 100%;
+		}
+	}
+
+	.section-title {
+		margin-bottom: 30px;
+		.thin { display: inline-block; }
+	}
+}
+/* Spheres section end */
