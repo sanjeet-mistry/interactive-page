@@ -131,7 +131,7 @@ const handleIntersect = (entries) => {
 		if (entry.isIntersecting) {
 			if (entry.target == interaction3Canvas) {
 				calculateAndSetCurrentValues();
-				for (var i = 0; i < interaction3Data.length; i ++) {
+				for (var i = 0; i < interaction3Data.length; i++) {
 					const ball = new Ball(interaction3Data[i].name, interaction3Data[i].value + "%", interaction3Data[i].color, interaction3Data[i].mass, interaction3Data[i].radius, interaction3Data[i].sMin, interaction3Data[i].sMax, i);
 					interaction3Balls.push(ball);
 					observer2.unobserve(entry.target);

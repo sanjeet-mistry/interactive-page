@@ -1,11 +1,4 @@
 @font-face {
-  font-family: "Caraque Trial Regular Melted";
-  font-style: normal;
-  font-weight: normal;
-  src: local("Caraque Trial Regular Melted"), url("../fonts/Caraque_Trial_RgMelted.woff") format("woff");
-  font-display: swap;
-}
-@font-face {
   font-family: "Poppins Regular";
   font-style: normal;
   font-weight: normal;
