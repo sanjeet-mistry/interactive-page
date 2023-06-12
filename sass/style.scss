@@ -6,6 +6,14 @@
 	font-display: swap;
 }
 
+@font-face {
+	font-family: 'Poppins Thin';
+	font-style: normal;
+	font-weight: normal;
+	src: local('Poppins Thin'), url('../fonts/Poppins-Thin.woff') format('woff');
+	font-display: swap;
+}
+
 $white: #fff;
 $gray: #626262;
 $black: #000;
