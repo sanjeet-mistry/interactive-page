@@ -18,15 +18,9 @@ $white: #fff;
 $gray: #626262;
 $black: #000;
 $large-pc: 1920px;
-$pc: 1440px;
 $small-pc: 1280px;
-$ipad-pro: 1024px;
 $tablet: 1023px;
-$ipad: 768px;
 $mobile: 767px;
-$large-mobile: 425px;
-$med-mobile: 375px;
-$small-mobile: 320px;
 
 @mixin breakpoint($device) {
 	@if ($device == 'large-pc') {
@@ -34,23 +28,8 @@ $small-mobile: 320px;
       @content;
     }
 	}
-  @else if($device=='pc'){
-    @media screen and (max-width: $pc) {
-      @content;
-    }
-  }
 	@else if($device=='small-pc'){
     @media screen and (max-width: $small-pc) {
-      @content;
-    }
-  } 
-  @else if($device=='ipad-pro') {
-    @media screen and (max-width: $ipad-pro) {
-      @content;
-    }
-  }
-  @else if($device=='ipad') {
-    @media screen and (max-width: $ipad) {
       @content;
     }
   }
@@ -61,26 +40,6 @@ $small-mobile: 320px;
   }
 	@else if($device=='mobile') {
     @media screen and (max-width: $mobile) {
-      @content;
-    }
-  }
-  @else if($device=='large-mobile') {
-    @media screen and (max-width: $large-mobile) {
-      @content;
-    }
-  }
-  @else if($device=='med-mobile') {
-    @media screen and (max-width: $med-mobile) {
-      @content;
-    }
-  }
-  @else if($device=='small-mobile') {
-    @media screen and (max-width: $small-mobile) {
-      @content;
-    }
-  }
-  @else if($device=='min-ipad') {
-    @media screen and (min-width: $ipad) {
       @content;
     }
   }
