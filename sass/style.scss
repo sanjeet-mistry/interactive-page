@@ -14,6 +14,8 @@
 	font-display: swap;
 }
 
+$font-awesome: "Font Awesome 6 Free";
+
 $white: #fff;
 $gray: #626262;
 $black: #000;
@@ -335,9 +337,7 @@ section {
 
 			&::after {
 				content: "\f060";
-				font-family: "Font Awesome 6 Free";
-				font-size: 24px;
-				font-weight: 900;
+				font: 900 24px/1 $font-awesome;
 
 				@include breakpoint(small-pc) {
 					font-size: 20px;
@@ -366,9 +366,7 @@ section {
 
 			&::after {
 				content: "\f061";
-				font-family: "Font Awesome 6 Free";
-				font-size: 24px;
-				font-weight: 900;
+				font: 900 24px/1 $font-awesome;
 
 				@include breakpoint(small-pc) {
 					font-size: 20px;
@@ -628,15 +626,13 @@ section {
 			width: 100%;
 			font-size: 18px;
 		}
-		
+
 		&::after {
 			content: '\f178';
 			margin-left: 5px;
 			display: inline-block;
 			color: $white;
-			font-family: "Font Awesome 6 Free";
-			font-size: 24px;
-			font-weight: 900;
+			font: 900 24px/1 "Font Awesome 6 Free";
 
 			@include breakpoint(small-pc) {
 				font-size: 22px;

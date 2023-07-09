@@ -322,9 +322,7 @@ section {
 }
 .slider-names-container .button.previous-button::after {
   content: "\f060";
-  font-family: "Font Awesome 6 Free";
-  font-size: 24px;
-  font-weight: 900;
+  font: 900 24px/1 "Font Awesome 6 Free";
 }
 @media screen and (max-width: 1280px) {
   .slider-names-container .button.previous-button::after {
@@ -356,9 +354,7 @@ section {
 }
 .slider-names-container .button.next-button::after {
   content: "\f061";
-  font-family: "Font Awesome 6 Free";
-  font-size: 24px;
-  font-weight: 900;
+  font: 900 24px/1 "Font Awesome 6 Free";
 }
 @media screen and (max-width: 1280px) {
   .slider-names-container .button.next-button::after {
@@ -630,9 +626,7 @@ section {
   margin-left: 5px;
   display: inline-block;
   color: #fff;
-  font-family: "Font Awesome 6 Free";
-  font-size: 24px;
-  font-weight: 900;
+  font: 900 24px/1 "Font Awesome 6 Free";
 }
 @media screen and (max-width: 1280px) {
   .quote-content a::after {
